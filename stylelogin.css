@@ -8,6 +8,7 @@ body{
     background-repeat: no-repeat;
     background-color: #E5E5E5;
 }
+/*----------------------------------------------LOGIN ----------------------------------------------------*/
 .login-conten{
     z-index: 1;
     position: absolute;
@@ -26,7 +27,7 @@ body{
     position: relative;
 }
 #formplogin{
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 1px 80px;
     text-decoration: none;
 }
