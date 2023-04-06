@@ -9,22 +9,96 @@ body{
     background-color: #E5E5E5;
 }
 
-.cadastro-conten1{
+#content{
     margin: 50px 20px 3px 450px;
-    Width:400px;
-    Height:366px;
-    background-color: white;
+    display: flex;
+    width: 400px;
+    height: 466px;
+    background: #FFFFFF;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
     border-radius: 16px;
+    
+
 }
+
+#singup-form{
+    display: flex;
+    flex-direction: column;
+    padding: 10px auto;
+}
+
 #logo-form{
-    margin: 1px 1px 15px 50px;
+    margin: 10px 10px 30px 60px;
 }
+
 #text{
+    color: #00995D;
+    margin: 1px 10px 80px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+#nameForm, #emailForm{
+    height: 30px;
+    background: #FFFFFF;
+    border: 2px solid #BDBDBD;
+    border-radius: 8px;
+}
+
+#prosseForm{
+    margin-left: 150px;
+    background-color:#00995D ;
+    height: 30px;
+    border-radius: 8px;
+    color: white;
+    width: 152px;   
+}
+
+.logocadastro{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+ /*-------------------------------------------------parte 2 ------------------------------------------------------*/
+#content1{
+    margin: 2px 20px 3px 20px;
+    display: flex;
+    width: 400px;
+    height: 466px;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+
+}
+#singup-form1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1px 2px 3px 4px;
+    
+}
+
+#logo-form1{
+    margin:10px 20px 1px 120px ;
+}
+
+#text1{
     color: #00995D;
     margin: 1px 10px 10px 30px;
     display: flex;
@@ -33,22 +107,24 @@ body{
     align-items: center;
 }
 
-.formulario-cad{
-    padding: 10px auto;
+#senhaForm, #confirmForm{
+    height: 30px;
+    width: 350px;
+    background: #FFFFFF;
+    border: 2px solid #BDBDBD;
+    border-radius: 8px;
 }
 
-#nome, #email,#password{
-    margin: 10px auto;
-    Width:300px;
-    Height:30px;
-    border-radius: 5px;
-}
-#prosseguir{
-    margin: 25px 30px 40px 200px;
+#senha,#confsenha{
     background-color: #00995D;
-    Width:142px;
-    Height:30px;
-    border-bottom:#00995D;
-    border-radius:8px;
-    box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.15);
+   
+}
+
+#restriForm{
+    padding: 10px 20px 30px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 350px;
 }

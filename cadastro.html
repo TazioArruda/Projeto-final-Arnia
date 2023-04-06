@@ -5,48 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="cadastro.css">
+    
     <title>Cadastro</title>
 </head>
 <body>
-    <div class="cadastro-conten1">
-
-        <div id="logocadastro">
-            <img id="logo-form" src="./img/cadastroformlogo.png"/>
-            <div id="text"><p>Seja bem-vindo(a)!</p><p>Preencha os campos para se cadastrar</p></div>
-        </div>
-        <div id="formcad">
-            <form class="formulario-cad">
-                <label for="nome" id="nome">Nome</label><br>
-                <input type="text" id="nome"><br>
-                <label for="email" id="email">Email</label><br>
-                <input type="email" id="email"><br>
-
-            </form>
-        </div>
-        <div>
-            <button onclick="prosseguir" id="prosseguir">Processeguir <i class="fa fa-plus"></i></button>
-        </div>
-
+    <div id="content">
+            <div id="logocadastro">
+                <img id="logo-form" src="./img/cadastroformlogo.png"/>
+                 <div id="text"><p>Seja bem-vindo(a)!</p><p>Preencha os campos para se cadastrar</p></div>
+            
+    
+                 <form id="singup-form">
+                         <label for="nome" id="nome">Nome</label>
+                         <input name="nome" id="nameForm" /><br>
+                         <label for="email" id="email">E-mail</label>
+                         <input type="email" id="emailForm"/><br>
+                         <button type="submit" id="prosseForm">Prosseguir</button>
+                </form>
+            </div>
+            
     </div>
-    <div class="cadastro-conten1">
 
-        <div id="logocadastro">
-            <img id="logo-form" src="./img/cadastroformlogo.png"/>
-            <div id="text"><p>Seja bem-vindo(a)!</p><p>Preencha os campos para se cadastrar</p></div>
-        </div>
-        <div id="formcad">
-            <form class="formulario-cad">
-                <label for="password" id="password">Senha</label><br>
-                <input type="password" id="nome"><br>
-                <label for="password" id="password">Confirmar Senha</label><br>
-                <input type="password" id="password"><br>
-
-            </form>
-        </div>
-        <div>
-            <button onclick="prosseguir" id="prosseguir">Processeguir <i class="fa fa-plus"></i></button>
-        </div>
-
-    </div>
+                
 </body>
+<script src="cad.js"></script>
 </html>

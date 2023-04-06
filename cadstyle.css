@@ -1,0 +1,14 @@
+table{
+    border-spacing: 0;
+    border-collapse: collapse;}
+
+
+td, th{
+    border: 1px, solid #000;
+}
+td:nth-child(2){
+    width: 200px;                 /* define os tamanhos das tabelas*/
+}
+th{
+    color:blue;
+}
