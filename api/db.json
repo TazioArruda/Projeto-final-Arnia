@@ -1,0 +1,26 @@
+{
+    "paciente": [
+        {
+            "nome":"Tazio",
+            "idade":32,
+            "sexo":"M",
+            "id": 1
+
+        },
+        {
+            "nome":"Guilherme",
+            "idade":32,
+            "sexo":"M",
+            "id": 1
+
+        },
+        {
+            "nome":"Lucas",
+            "idade":32,
+            "sexo":"M",
+            "id": 1
+
+        }
+    ]
+
+}
