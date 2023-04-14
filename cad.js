@@ -34,9 +34,9 @@ function handleNextPage(e) {
 
                 <form id="singup-form1">
                          <label for="nome" id="senha">Senha</label>
-                         <input name="nome" id="senhaForm" /><br>
+                         <input type="password" name="nome" id="senhaForm" /><br>
                          <label for="email" id="confsenha">Confirmar senha</label>
-                         <input type="email" id="confirmForm"/><br>
+                         <input type="password" id="confirmForm"/><br>
 
                          <div id="restriForm1">
                             <div>*Precisa no mínimo 8 digitos<div>
@@ -58,3 +58,5 @@ formElement.addEventListener('submit', handleNextPage)
 
 
 /*-------------------------------------------------FINAL DA FUNÇÃO -------------------------------------------------*/
+
+
