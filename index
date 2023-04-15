@@ -1,0 +1,67 @@
+
+/*const novoPaciente = async (post) => {
+    // Obtenho a lista de pacientes 
+    const url = "http://localhost:3000/novoCadastro";
+    const response = await fetch(url);
+    const patients = await response.json();
+
+    await fetch (url , {
+        method:'POST',
+        headers:{
+            'Accept': 'application/json, text/plain, /*', 
+            'Content-Type': 'application/json'  
+
+
+        },
+        body: JSON.stringify(post)
+    })
+
+
+}*/
+
+getPaciente = async ()=>{
+    const content = document.getElementById('contentTable')
+    const requisicao = await fetch('http://localhost3000/novoCadastro')
+    const pacientes = await requisicao.json()
+    console.log(pacientes)
+    //let conteudo = ''
+    pacientes.forEach(paciente => {
+
+        //conteudo = conteudo +'<div>${paciente.nome}</div>'
+        
+    });
+
+    content.innerHTML = conteudo
+}
+novoPaciente = async ( novo) =>{
+
+    await fetch ('http://localhost:3000/novoCadastro',{
+        method:'POST',
+        headers:{
+            'Accept': 'application/json, text/plain, */*', 
+            'Content-Type': 'application/json'  
+
+
+        },
+        body: JSON.stringify(novo)
+    })
+    fecharModal()
+    fecharModal2()
+}
+
+
+form.addEventListener("submit", (e)=>{
+    e.preventDefault()
+
+    const cpfForm = form.elements["cpf"].value
+    const nomeForm = form.elements["nome"].value
+    const dataNasForm = form.elements["dataNas"].value
+    const emailForm = form.elements["email"].value
+    const sexoForm = form.elements["sexo"].value
+    const nacForm = form.elements["nac"].value
+    const natuForm = form.elements["natu"].value
+    const profForm = form.elements["prof"].value
+    const escoForm = form.elements["esco"].value
+    const civilForm = form.elements["civil"].value
+    const maeForm = form.elements["mae"].value
+    const paiForm = form.elements["pai"].value

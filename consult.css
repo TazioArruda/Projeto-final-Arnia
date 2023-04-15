@@ -333,7 +333,7 @@ cursor: pointer;
     top: 0px;
     left: 0px;
     z-index: 1;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 

@@ -2,58 +2,26 @@ const modal = document.getElementById("modal-container")
 const modal2 = document.getElementById("modal2")
 const modal3 = document.getElementById("modal3")
 const form =  document.getElementById("formModal")
+const btn = document.getElementById("buttonConfirm")
 
 
 
 
-/*const novoPaciente = async (post) => {
-    // Obtenho a lista de pacientes 
-    const url = "http://localhost:3000/novoCadastro";
-    const response = await fetch(url);
-    const patients = await response.json();
-
-    await fetch (url , {
+async function criarPost(novo){
+  
+    return fetch('http://localhost:3000/novoCadastro',{
         method:'POST',
         headers:{
-            'Accept': 'application/json, text/plain, /*', 
-            'Content-Type': 'application/json'  
-
-
+            'Accept':'application/json, text/plain, */*',
+            'Content-Type':'application/json'
         },
-        body: JSON.stringify(post)
-    })
 
-
-}*/
-
-getPaciente = async ()=>{
-    const content = document.getElementById('contentTable')
-    const requisicao = await fetch('http://localhost3000/novoCadastro')
-    const pacientes = await requisicao.json()
-    console.log(pacientes)
-    let conteudo = ''
-    pacientes.forEach(paciente => {
-
-        conteudo = conteudo +'<div>${paciente.nome}</div>'
-        
-    });
-
-    content.innerHTML = conteudo
-}
-novoPaciente = async (novo) =>{
-    await fetch ('http://localhost:3000/novoCadastro',{
-        method:'POST',
-        headers:{
-            'Accept': 'application/json, text/plain, */*', 
-            'Content-Type': 'application/json'  
-
-
-        },
         body: JSON.stringify(novo)
+        
     })
-    fecharModal()
-    fecharModal2()
+    
 }
+
 
 
 
@@ -89,43 +57,43 @@ fecharModal3 = () =>{
 
 
 
-form.addEventListener("submit", (e)=>{
-    e.preventDefault()
+ async function enviarDados(){
 
-    const cpfForm = form.elements["cpf"].value
-    const nomeForm = form.elements["nome"].value
-    const dataNasForm = form.elements["dataNas"].value
-    const emailForm = form.elements["email"].value
-    const sexoForm = form.elements["sexo"].value
-    const nacForm = form.elements["nac"].value
-    const natuForm = form.elements["natu"].value
-    const profForm = form.elements["prof"].value
-    const escoForm = form.elements["esco"].value
-    const civilForm = form.elements["civil"].value
-    const maeForm = form.elements["mae"].value
-    const paiForm = form.elements["pai"].value
+  const cpfValue =  document.querySelector('#cpf');
+  const nomeValue = document.querySelector('#nome');
+  const dataValue = document.querySelector('#datanas');
+  const emailValue = document.querySelector('#email');
+  const sexoValue = document.querySelector('#sexo');
+  const nacValue = document.querySelector('#nac');
+  const natuValue = document.querySelector('#natu');
+  const profValue = document.querySelector('#prof');
+  const escoValue = document.querySelector('#esco');
+  const civilValue = document.querySelector('#civil');
+  const maeValue = document.querySelector('#mae');
+  const paiValue = document.querySelector('#pai');
+
 
    const novoCadastro = {
-
-        cpf: cpfForm,
-        nome:nomeForm,
-        dataNas:dataNasForm,
-        email:emailForm,
-        sexo:sexoForm,
-        nac:nacForm,
-        natu:natuForm,
-        prof:profForm,
-        esco:escoForm,
-        civil:civilForm,
-        mae:maeForm,
-        pai:paiForm
-
-        
-
-
+        cpf:cpfValue.value,
+        nome:nomeValue.value,
+        dataNas:dataValue.value,
+        email:emailValue.value,
+        sexo:sexoValue.value,
+        nac:nacValue.value,
+        natu:natuValue.value,
+        prof:profValue.value,
+        esco:escoValue.value,
+        civil:civilValue.value,
+        mae:maeValue.value,
+        pai:paiValue.value,
     }
+    console.log(novoCadastro)
     
-    novoPaciente(novoCadastro)
+await criarPost(novoCadastro)
+console.log(criarPost)
+}
 
-})
+criarPost()
+
+btn.addEventListener('click', enviarDados)
 
