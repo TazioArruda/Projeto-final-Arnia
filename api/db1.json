@@ -1,0 +1,34 @@
+{
+  "novoCadastro": [
+    {
+      "cpf": "11",
+      "nome": "11",
+      "dataNas": "1111-11-01",
+      "email": "tazioalmeida@gmail.com",
+      "sexo": "masculino",
+      "nac": "masculino",
+      "natu": "teste",
+      "prof": "teste",
+      "esco": "teste",
+      "civil": "masculino",
+      "mae": "teste",
+      "pai": "teste",
+      "id": 1
+    },
+    {
+      "cpf": "2222222",
+      "nome": "tazio",
+      "dataNas": "1991-03-30",
+      "email": "tazioalmeida@gmail.com",
+      "sexo": "masculino",
+      "nac": "masculino",
+      "natu": "teste",
+      "prof": "teste",
+      "esco": "teste",
+      "civil": "masculino",
+      "mae": "teste",
+      "pai": "teste",
+      "id": 2
+    }
+  ]
+}

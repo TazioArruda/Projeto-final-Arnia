@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #F2F2F2;
+}
+
+h3{
+    font-family: 'Comfortaa', cursive;
+    font-Weight:400px;
+    Size:24px;
+    color: #4F4F4F;
+}
+
+#header{
+    background-color:#FFFFFF;
+    width: 100vw;
+    height: 81px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+#logoheader{
+    
+    width: 80px;
+    height: 80.75px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    
+}
+#logo{
+    Width:28.85px;
+    Height:44.33px;
+    display:flex;
+    margin: 10px auto;
+}
+
+a {
+    text-decoration: none;
+    color: #212121;
+}
+
+#voltarListagem{
+    margin-right: auto;
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    
+}
+
+.bemvindo{
+    color: #017849;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Comfortaa', cursive;
+    font-Weight:400px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#contentheader{
+    margin: 20px auto;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    width: 1084px;
+    height: 101px;
+    
+
+}
+
+#textpacientes{
+    margin: 10px auto;
+    color: #4F4F4F;
+    width: 1100px;
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+}
+#contenBody{
+    margin: 10px auto;
+    width: 1104px;
+    height: 100%;
+    display: flex;
+    
+
+}
+#idusuario{
+    
+    background-color:#FFFFFF;
+    width: 340px;
+    height: 350px ;
+    border: 1px solid #E0E0E0;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    
+ 
+}
+#opcao{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 770px;
+    height: 80px;
+    margin-left: 40px;
+    background-color: #FFFFFF;
+}
+#section{
+    
+    background: yellow;
+    margin-left: 40px;
+    width: 770px;
+    height: 100px;
+}
+#pesquisa{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+#sessao{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    color: #616161;
+    background-color: #FFFFFF;
+}
+
+#sessao1{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 150px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    color: #616161;
+    background-color: #FFFFFF;
+}
+
+#buscar{
+    background-color:#FFFFFF;
+    border:solid 2px #BDBDBD;
+    border-radius:10px;
+    width:379px;
+    height:38px;    
+  }
+  
+  #txtBusca{
+    float:left;
+    background-color:transparent;
+    padding-left:5px;
+    font-size:18px;
+    border:none;
+    height:32px;
+    width:254px;
+  }
+  
+  #btnBusca{
+    border:none;
+    height:38px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius:0 7px 7px 0;
+    width:120px;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    background:#00995D;
+    color: #FFFFFF;
+    
+  }
+  
+#search{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+#idusuario{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: #00995D;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+
+}
+#paciente{
+    margin: 1px auto;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #212121;
+}
+#conteudo{
+    margin-left: 20px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+}
+#conteudop{
+    margin-left: 20px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #616161;
+}
+
+
