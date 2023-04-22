@@ -216,6 +216,13 @@ table td, table th{
     border-radius: 8px;
     
 }
+#cpf2,#nome2,#dataNas2,#email2,#sexo2,#nac2,#natu2,#prof2,#esco2,#civil2,#pai2,#mae2{
+    width: 250px;
+    height: 38px;
+    border: 1px solid #BDBDBD;
+    border-radius: 8px;
+    
+}
 #texmodalfor{
     padding:30px;
     display: flex;
@@ -333,7 +340,7 @@ cursor: pointer;
     top: 0px;
     left: 0px;
     z-index: 1;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 
@@ -349,8 +356,42 @@ cursor: pointer;
     border-radius: 16px;
 }
 
-#cheking{
+#chek{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+#imgcheck{
     width: 214px;
     height: 214px;
 }
+#chektext{
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 128%;
+    color: #00995D;
+}
 
+#buttonchek{
+    cursor: pointer;
+    margin: 20px auto;
+    background-color: #017849;
+    border-radius: 8px;
+    width: 200px;
+    height: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    
+}
+#icon1,#icon2,#icon3{
+    border: none;
+
+}

@@ -50,52 +50,20 @@
                     <th>CPF</th>
                     <th>Ações</th>
                 </thead>
-                <tbody>
+                <tbody id="batata">
                     <tr>
-                        <td onclick="abrirModal3()" cursor="pointer">28</td>
-                        <td onclick="abrirModal3()">Ana Maria</td>
-                        <td onclick="abrirModal3()">885.012.130-00</td>
+                        <td onclick="abrirModal3()"></td>
+                        <td onclick="abrirModal3()"></td>
+                        <td onclick="abrirModal3()"></td>
                         <td>
                             <div>
-                                <button id="prontuario"><a href="pronturario.html"><i class="fa-solid fa-table-list"
-                                            style="color: #017849;"></i></button></a>
-                                <button onclick="abrirModal2()" id="icon2"><i class="fa-regular fa-pen-to-square"
-                                        style="color: #2f08ed;"></i></button>
-                                <button id="icon3"><i class="fa-solid fa-trash-can"
-                                        style="color: #eb5757;"></i></button>
+                                <button id="icon4"><a href="pronturario.html"><img src="./img/pront.png"></a></button>
+                                <button id="icon2" onclick="abrirModal()" ><img src="./img/edit.png" ></button>
+                                <button id="icon3" onclick="removerPaciente()" type="submit"><img src="delet.png"></button>
                             </div>
                         </td>
                     </tr>
-                    <tr>
-                        <td>28</td>
-                        <td>Ana Maria</td>
-                        <td>885.012.130-00</td>
-                        <td>
-                            <div>
-                                <button id="prontuario"><a href="#"><i class="fa-solid fa-table-list"
-                                            style="color: #017849;"></i></button></a>
-                                <button id="icon2"><i class="fa-regular fa-pen-to-square"
-                                        style="color: #2f08ed;"></i></button>
-                                <button id="icon3"><i class="fa-solid fa-trash-can"
-                                        style="color: #eb5757;"></i></button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>28</td>
-                        <td>Ana Maria</td>
-                        <td>885.012.130-00</td>
-                        <td>
-                            <div>
-                                <button id="prontuario"><a href="#"><i class="fa-solid fa-table-list"
-                                            style="color: #017849;"></i></button></a>
-                                <button id="icon2"><i class="fa-regular fa-pen-to-square"
-                                        style="color: #2f08ed;"></i></button>
-                                <button id="icon3"><i class="fa-solid fa-trash-can"
-                                        style="color: #eb5757;"></i></button>
-                            </div>
-                        </td>
-                    </tr>
+                    
                 </tbody>
             </table>
 
@@ -103,7 +71,7 @@
 
     </div>
     <div id="tabela"></div>
-    <!---------------------------------------------MODAL1 NOVO PACIENTE------------------------------------------------------------------->
+    <!---------------------------------------------MODAL1 NOVO PACIENTE--------------------------->
     <div id="modal-container" class="modal-container">
         <div id="modal">
             <div id="texmodalfor">
@@ -185,7 +153,7 @@
                             </div>
                             <div id="button1">
                                 <button onclick="fecharModal()" id="buttonConfirm">Cancelar</button>
-                                <button onclick="fecharModal()" type="submit" id="buttonConfirm">Salvar</button>
+                                <button onclick="abrirModal4()" type="submit" id="buttonConfirm">Salvar</button>
                             </div>
                         </div>
 
@@ -200,7 +168,7 @@
         </div>
     </div>
 
-    <!---------------------------------------------MODAL2 EDITAR PACIENTE ------------------------------------------------------------------->
+    <!--------------------------------------------MODAL2 EDITAR PACIENTE-------------------------->
     <div id="modal2" class="modal2">
         <div id="modal">
             <div id="texmodalfor">
@@ -212,23 +180,23 @@
                     <form id="formModal">
                         <div>
                             <label for="cpf">CPF</label><br>
-                            <input type="number" name="cpf" id="cpf" placeholder="Digite" />
+                            <input type="text" name="cpf" id="cpf2" placeholder="Digite" />
                         </div>
                         <div>
                             <label for="nome">Nome</label><br>
-                            <input type="text" name="nome" id="nome" placeholder="Digite" />
+                            <input type="text" name="nome" id="nome2" placeholder="Digite" />
                         </div>
                         <div>
                             <label for="dataNas">Data de Nascimento </label><br>
-                            <input type="date" name="dataNas" id="datanas" placeholder="Digite" />
+                            <input type="date" name="dataNas" id="dataNas2" placeholder="Digite" />
                         </div>
                         <div>
                             <label for="email">E-mail</label><br>
-                            <input type="email" name="email" id="email" placeholder="Digite" />
+                            <input type="email" name="email" id="email2" placeholder="Digite" />
                         </div>
                         <div>
                             <label for="genero">Sexo/Gênero</label><br>
-                            <select name="sexo" id="sexo" placeholder="Digite">
+                            <select name="sexo" id="sexo2" placeholder="Digite">
                                 <option value="masculino">Digite</option>
                                 <option value="masculino">Masculino</option>
                                 <option value="feminino">Feminino</option>
@@ -237,7 +205,7 @@
                         </div>
                         <div>
                             <label for="">Nacionalidade</label><br>
-                            <select name="nac" id="nac" placeholder="Digite">
+                            <select name="nac" id="nac2" placeholder="Digite">
                                 <option value="masculino">Digite</option>
                                 <option value="masculino">Brasileiro</option>
                                 <option value="feminino">Argentino</option>
@@ -247,19 +215,19 @@
                         <div>
 
                             <label for="natu">Naturalidade</label><br>
-                            <input type="text" name="natu" id="natu" placeholder="Digite" />
+                            <input type="text" name="natu" id="natu2" placeholder="Digite" />
                         </div>
                         <div>
                             <label for="prof">Profissão</label><br>
-                            <input text="text" name="prof" id="prof" placeholder="Digite" />
+                            <input text="text" name="prof" id="prof2" placeholder="Digite" />
                         </div>
                         <div>
                             <label for="esco">Escolaridade</label><br>
-                            <input text="text" name="esco" id="esco" placeholder="Digite" />
+                            <input text="text" name="esco" id="esco2" placeholder="Digite" />
                         </div>
                         <div>
                             <label for="civil">Estado Civil</label><br>
-                            <select name="civil" id="civil" placeholder="Digite">
+                            <select name="civil" id="civil2" placeholder="Digite">
                                 <option value="masculino">Digite</option>
                                 <option value="masculino">Casado</option>
                                 <option value="feminino">Solteiro</option>
@@ -268,11 +236,11 @@
                         </div>
                         <div>
                             <label for="mae">Mãe</label><br>
-                            <input type="text" name="mae" id="mae" placeholder="Digite" />
+                            <input type="text" name="mae" id="mae2" placeholder="Digite" />
                         </div>
                         <div>
                             <label for="pai">Pai</label><br>
-                            <input type="text" name="pai" id="pai" placeholder="Digite" />
+                            <input type="text" name="pai" id="pai2" placeholder="Digite" />
                         </div>
                         <hr>
                         <div id="rodape">
@@ -282,7 +250,7 @@
                             </div>
                             <div id="button1">
                                 <button id="buttonConfirm" onclick="fecharModal2()">Cancelar</button>
-                                <button onclick="editar()" type="submit" id="buttonConfirm">Salvar
+                                <button onclick="editarPaciente()" type="submit" id="buttonConfirm">Salvar
                                     alterações</button>
                             </div>
                         </div>
@@ -298,11 +266,11 @@
         </div>
     </div>
 
-    <!---------------------------------------------MODAL3 CONSULTA ------------------------------------------------------------------->
+    <!---------------------------------------------MODAL3 CONSULTA -------------------------------->
     <div id="modal3" class="modal3">
         <div id="modal">
             <div id="texmodalfor">
-                <h3><strong>Editar Pacientes</strong> </h3>
+                <h3><strong>Consultar pacientes</strong> </h3>
                 <button onclick="fecharModal3()" id="fechar"><img src="./img/Vectorclosed.png"></button>
             </div>
             <div id="conteudoModal">
@@ -318,7 +286,7 @@
                         </div>
                         <div>
                             <label for="dataNas">Data de Nascimento </label><br>
-                            <input type="date" name="dataNas" id="datanas" placeholder="Digite" />
+                            <input type="date" name="dataNas" id="dataNas" placeholder="Digite" />
                         </div>
                         <div>
                             <label for="email">E-mail</label><br>
@@ -380,7 +348,7 @@
                             </div>
                             <div id="button1">
                                 <button id="buttonConfirm" onclick="fecharModal3()">Cancelar</button>
-                                <button onclick="consultar()" type="submit" id="buttonConfirm">Salvar
+                                <button onclick="abrirModal3()" type="submit" id="buttonConfirm">Salvar
                                     alterações</button>
                             </div>
                         </div>
@@ -392,17 +360,17 @@
         </div>
     </div>
 
-    <!-----------------------------------------MODAL CHECKING-------------------------------------->
-    <!---<div id="modal4" class="modal4">
+    <!---------------------------------------------MODAL CHECKING---------------------------------->
+    <div id="modal4" class="modal4">
         <div id="modalcontent">
         <div id="chek">
-                <div><img src="./img/check-green.gif" id="cheking"></div>
-                <div>Paciente cadastrado com sucesso!</div>
-                <div><button>OK</button></div>
+                <div id="cheking"><img src="./img/check-green.gif" id="imgcheck"></div>
+                <div id="chektext">Paciente cadastrado com sucesso!</div>
+                <button id="buttonchek" onclick="fecharModal4()">OK</button>
         </div>
     </div>
 
-    </div>-->
+    </div>
 </body>
 
 </html>

@@ -1,7 +1,10 @@
 const modal = document.getElementById("modal-container")
 const modal2 = document.getElementById("modal2")
 const modal3 = document.getElementById("modal3")
+<<<<<<< HEAD
 const modal4 = document.getElementById("modal4")
+=======
+>>>>>>> c703bf576f692b0f3ef97971ecfb4006b3c274e7
 const form =  document.getElementById("formModal")
 const btn = document.getElementById("buttonConfirm")
 
@@ -20,7 +23,11 @@ async function criarPost(novo){
         body: JSON.stringify(novo)
         
     })
+<<<<<<< HEAD
    
+=======
+    
+>>>>>>> c703bf576f692b0f3ef97971ecfb4006b3c274e7
 }
 
 
@@ -46,16 +53,24 @@ fecharModal2 = () =>{
     modal2.style.display = "none"
 }
 
+<<<<<<< HEAD
 // Abrir e fechar modal 3 
+=======
+// Abrir e fechar modal 2 
+>>>>>>> c703bf576f692b0f3ef97971ecfb4006b3c274e7
 abrirModal3 = ()=>{
     modal3.style.display = "flex"
 }
 console.log(modal3)
+<<<<<<< HEAD
 
+=======
+>>>>>>> c703bf576f692b0f3ef97971ecfb4006b3c274e7
 fecharModal3 = () =>{
     modal3.style.display = "none"
 }
 
+<<<<<<< HEAD
 // Abrir e fechar modal 4
 abrirModal4 = ()=>{
     modal4.style.display = "flex"
@@ -76,6 +91,8 @@ console.log(modal5)
 fecharModal5 = () =>{
     modal5.style.display = "none"
 }
+=======
+>>>>>>> c703bf576f692b0f3ef97971ecfb4006b3c274e7
 
 
 

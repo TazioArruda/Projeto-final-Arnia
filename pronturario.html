@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="prontuario.css">
     <script src="https://kit.fontawesome.com/bf9e50d531.js" crossorigin="anonymous"></script>
+    <script src="abrirmodal2.js" defer> </script>
     <title>Document</title>
 </head>
 
@@ -42,29 +43,201 @@
 
             <div id="paciente">Identificação do paciente</div>
             <div id="conteudo">
-                <div><img src="./img/Vectoruser.png">     Paciente</div><br>
+                <div><img src="./img/Vectoruser.png"> Paciente</div><br>
                 <p id="conteudop">Ana Ester Resende</p><br>
-                <div><img src="./img/Vectorcar.png">      Nascimento</div><br>
+                <div><img src="./img/Vectorcar.png"> Nascimento</div><br>
                 <p id="conteudop">10/09/2000</p><br>
-                <div><img src="./img/Vectorcard.png">     Profissão</div><br>
+                <div><img src="./img/Vectorcard.png"> Profissão</div><br>
                 <p id="conteudop">Designer</p><br>
-                <div><img src="./img/Vectorli.png">         Escolaridade</div><br>
+                <div><img src="./img/Vectorli.png"> Escolaridade</div><br>
                 <p id="conteudop">Superior incompleto</p><br>
             </div>
         </div>
         <div id="opcaosection">
             <div id="opcao">
-                <div><button id="sessao"><img src="./img/Vector.png">Sessão</button></div>
-                <div><button id="sessao1"><img src="./img/Vector1.png">Fato relevante</button></div>
+                <div><button type="submit" onclick="abrirModal5()" id="sessao"><img
+                            src="./img/Vector.png">Sessão</button></div>
+                <div><button onclick="abrirModal6()" id="sessao1"><img src="./img/Vector1.png">Fato relevante</button></div>
             </div>
             <div id="section">
-
+                fdghdsghsd
             </div>
         </div>
 
 
     </div>
 
-</body>
+    <!----------------------------------------MODAL-------------------------------------------------------->
+    <div id="modal5">
+
+        <div id="modalcoten">
+            <div id="sessaoM">
+                <div id="msessao">
+                    <h3><strong>Nova Sessão</strong> </h3>
+                    <button onclick="fecharModal5()" id="fechar"><img src="./img/Vectorclosed.png"></button>
+                </div>
+
+                <div id="dadosGerais">
+                    <p id="indice">1 </p>
+                    <h2 id="dadosGeraish4">Dados Gerais</h2>
+                </div>
+
+                <div id="modalSessao">
+
+
+                    <div id="datas">
+                        <section>
+                            <label id="labelDatas" for="data">Data*</label><br>
+                            <input type="" name="data" id="data"><br>
+                        </section>
+
+                        <section>
+                            <label id="labelDatas" for="hInicio">Hora de início*</label><br>
+                            <input type="" name="hInicio" id="hInicio"><br>
+                        </section>
+
+                        <section>
+                            <label id="labelDatas" for="hFim">Hora fim*</label><br>
+                            <input type="" name="hFim" id="hFim"><br>
+                        </section>
+                    </div>
+
+
+
+                </div>
+                <hr>
+                <div id="dadosGerais">
+                    <p id="indice">2 </p>
+                    <h2 id="dadosGeraish4">Sessão</h2>
+                </div>
+                <div id="titulo3">
+                    <section>
+                        <label id="labelTitulo" for="titulo">Título*</label><br>
+                        <input type="" name="titulo" id="titulo4"><br>
+                    </section>
+
+                    <section>
+                        <label id="labelTitulo" for="rSessao">Resumo da sessão*</label><br>
+                        <input type="" name="rSessao" id="rSessao"><br>
+                    </section>
+
+                </div>
+                <br>
+                <hr>
+                <div id="dadosGerais">
+
+                    <p id="indice">3 </p>
+                    <h2 id="dadosGeraish4">Pagamentos</h2>
+                </div>
+
+
+                <div id="modalSessao">
+
+
+                    <div id="datas">
+                        <section>
+                            <label id="labelDatas" for="data">Valor*</label><br>
+                            <input type="" name="data" id="data"><br>
+                        </section>
+
+                        <section>
+                            <label id="labelDatas" for="hInicio">Forma de pagamento*</label><br>
+
+                            <select name="hInicio" id="hInicio">
+
+                                <option value="masculino">Dinheiro</option>
+                                <option value="feminino">Cartão</option>
+                                <option value="indefinido">Pix</option>
+                            </select>
+                        </section>
+
+                        <section>
+                            <label id="labelDatas" for="status">Status*</label><br>
+                            <div id="pago">
+                                <input type="radio" name="status" value="pago">Pago<br>
+                                <input type="radio" name="status" value="pagoNpago">Não pago<br>
+                            </div>
+                        </section>
+
+
+                    </div>
+
+
+
+                </div>
+                <div id="dica">
+                    <img src="./img/Vector1.png">
+                    <p>
+                    <h5>Dica:</h5> Registrar os Pagamentos das sessões irá
+                    te auxiliar na sua organização financeira</p>
+                </div>
+
+            </div>
+            <hr>
+            <div id="rodape">
+
+                <div>
+                    <p>*Campos obrigatórios</p>
+                </div>
+                <div id="button1">
+                    <button onclick="fecharModal5()" id="buttonConfirm">Cancelar</button>
+                    <button onclick="fecharModal5()" type="submit" id="buttonConfirm">Salvar</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!---------------------------------------------------FATOS RELEVANTES------------------------------------------->
+
+    <div id="modal6">
+
+        <div id="modalcoten">
+            <div id="sessaoM">
+                <div id="msessao">
+                    <h3><strong>Novo Fato Relevante</strong> </h3>
+                    <button onclick="fecharModal6()" id="fechar"><img src="./img/Vectorclosed.png"></button>
+                </div>
+
+                <div id="modalSessao">
+
+
+                    <div id="datas">
+                        <section>
+                            <label id="labelDatas" for="data">Data*</label><br>
+                            <input type="" name="data" id="data"><br>
+                        </section>
+
+                        <section>
+                            <label id="labelDatas" for="hInicio">Titulo*</label><br>
+                            <input type="" name="hInicio" id="hInicio2" placeholder="Digite"><br>
+                        </section>
+                    </div>
+
+                </div>
+                <div>
+                    <section>
+                        <label id="labelDatas2" for="hInicio">Descrição*</label><br>
+                        <br>
+                        <input type="text" name="hInicio2" id="desc2" placeholder="text"><br>    
+                    </section>
+                </div>
+                <hr>
+                <div id="rodape">
+
+                    <div>
+                        <p>*Campos obrigatórios</p>
+                    </div>
+                    <div id="button1">
+                        <button onclick="fecharModal6()" id="buttonConfirm">Cancelar</button>
+                        <button onclick="fecharModal6()" type="submit" id="buttonConfirm">Salvar</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
 
 </html>
