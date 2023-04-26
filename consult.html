@@ -51,18 +51,7 @@
                     <th>Ações</th>
                 </thead>
                 <tbody id="batata">
-                    <tr>
-                        <td onclick="abrirModal3()"></td>
-                        <td onclick="abrirModal3()"></td>
-                        <td onclick="abrirModal3()"></td>
-                        <td>
-                            <div>
-                                <button id="icon4"><a href="pronturario.html"><img src="./img/pront.png"></a></button>
-                                <button id="icon2" onclick="abrirModal()" ><img src="./img/edit.png" ></button>
-                                <button id="icon3" onclick="removerPaciente()" type="submit"><img src="delet.png"></button>
-                            </div>
-                        </td>
-                    </tr>
+                    
                     
                 </tbody>
             </table>
@@ -70,7 +59,7 @@
         </div>
 
     </div>
-    <div id="tabela"></div>
+    
     <!---------------------------------------------MODAL1 NOVO PACIENTE--------------------------->
     <div id="modal-container" class="modal-container">
         <div id="modal">
@@ -80,7 +69,7 @@
             </div>
             <div id="conteudoModal">
                 <div id="form">
-                    <form id="formModal">
+                    <form id="formModal" class="formModal">
                         <div>
                             <label for="cpf">CPF</label><br>
                             <input type="number" name="cpf" id="cpf" placeholder="Digite" />
@@ -152,7 +141,7 @@
                                 <p>*Campos obrigatórios</p>
                             </div>
                             <div id="button1">
-                                <button onclick="fecharModal()" id="buttonConfirm">Cancelar</button>
+                                <button onclick="fecharModal2()" id="buttonConfirm">Cancelar</button>
                                 <button onclick="abrirModal4()" type="submit" id="buttonConfirm">Salvar</button>
                             </div>
                         </div>
@@ -177,7 +166,7 @@
             </div>
             <div id="conteudoModal">
                 <div id="form">
-                    <form id="formModal">
+                    <form id="formModal2" class="formModal">
                         <div>
                             <label for="cpf">CPF</label><br>
                             <input type="text" name="cpf" id="cpf2" placeholder="Digite" />
@@ -249,8 +238,8 @@
                                 <p>*Campos obrigatórios</p>
                             </div>
                             <div id="button1">
-                                <button id="buttonConfirm" onclick="fecharModal2()">Cancelar</button>
-                                <button onclick="editarPaciente()" type="submit" id="buttonConfirm">Salvar
+                                <button id="buttonConfirm" onclick="fecharModal()">Cancelar</button>
+                                <button type="submit" id="buttonConfirm">Salvar
                                     alterações</button>
                             </div>
                         </div>
@@ -275,7 +264,7 @@
             </div>
             <div id="conteudoModal">
                 <div id="form">
-                    <form id="formModal">
+                    <form id="formModal" class="formModal">
                         <div>
                             <label for="cpf">CPF</label><br>
                             <input type="number" name="cpf" id="cpf" placeholder="Digite" />
@@ -340,18 +329,7 @@
                             <label for="pai">Pai</label><br>
                             <input type="text" name="pai" id="pai" placeholder="Digite" />
                         </div>
-                        <hr>
-                        <div id="rodape">
-
-                            <div>
-                                <p>*Campos obrigatórios</p>
-                            </div>
-                            <div id="button1">
-                                <button id="buttonConfirm" onclick="fecharModal3()">Cancelar</button>
-                                <button onclick="abrirModal3()" type="submit" id="buttonConfirm">Salvar
-                                    alterações</button>
-                            </div>
-                        </div>
+                      
 
                     </form>
                 </div>

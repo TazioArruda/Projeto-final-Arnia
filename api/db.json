@@ -1,7 +1,22 @@
 {
   "novoCadastro": [
     {
-      "cpf": "4444444",
+      "cpf": "12345678999",
+      "nome": "teste",
+      "dataNas": "2023-12-31",
+      "email": "tazioalmeida@gmail.com",
+      "sexo": "masculino",
+      "nac": "masculino",
+      "natu": "teste",
+      "prof": "",
+      "esco": "teste",
+      "civil": "masculino",
+      "mae": "teste",
+      "pai": "teste",
+      "id": 1
+    },
+    {
+      "cpf": "12345678999",
       "nome": "teste",
       "dataNas": "1991-03-30",
       "email": "tazioalmeida@gmail.com",
@@ -13,67 +28,7 @@
       "civil": "masculino",
       "mae": "teste",
       "pai": "teste",
-      "id": 1
-    },
-    {
-      "cpf": "1111111111111",
-      "nome": "teste",
-      "dataNas": "1111-11-11",
-      "email": "1111@gmail.com",
-      "sexo": "masculino",
-      "nac": "masculino",
-      "natu": "teste",
-      "prof": "teste",
-      "esco": "teste",
-      "civil": "masculino",
-      "mae": "teste",
-      "pai": "teste",
       "id": 2
-    },
-    {
-      "cpf": "1111111111111",
-      "nome": "teste",
-      "dataNas": "1111-11-11",
-      "email": "1111@gmail.com",
-      "sexo": "masculino",
-      "nac": "masculino",
-      "natu": "teste",
-      "prof": "teste",
-      "esco": "teste",
-      "civil": "masculino",
-      "mae": "teste",
-      "pai": "teste",
-      "id": 3
-    },
-    {
-      "cpf": "12345678999",
-      "nome": "tazio",
-      "dataNas": "1111-11-11",
-      "email": "tazioalmeida@gmail.com",
-      "sexo": "masculino",
-      "nac": "masculino",
-      "natu": "teste",
-      "prof": "teste",
-      "esco": "teste",
-      "civil": "masculino",
-      "mae": "teste",
-      "pai": "777777",
-      "id": 4
-    },
-    {
-      "cpf": "12345678999",
-      "nome": "tazio",
-      "dataNas": "1111-11-11",
-      "email": "tazioalmeida@gmail.com",
-      "sexo": "masculino",
-      "nac": "masculino",
-      "natu": "teste",
-      "prof": "teste",
-      "esco": "teste",
-      "civil": "masculino",
-      "mae": "teste",
-      "pai": "777777",
-      "id": 5
     }
   ]
 }

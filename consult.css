@@ -197,7 +197,7 @@ table td, table th{
    
 }
 
-#formModal{
+.formModal{
    padding: 10px;
    height: 310px;
    display: flex;
