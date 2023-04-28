@@ -14,7 +14,7 @@
 <body>
     <div id="header">
         <div id="logoheader">
-            <img id="logo" src="./img/logoconsult.png">
+            <img id="logo" src="./img/pensa.png">
         </div>
         <div id="bemvindo">
             <h3 class="bemvindo">Bem vindo(a), <strong>Tazio Arruda</strong><img src="./img/arrow-down.png">
@@ -36,9 +36,9 @@
                 <div id="buscar">
 
                     <form id="search">
-                        <input type="text" id="txtBusca" placeholder="Pesquisar" />
+                        <input type="text" id="txtBusca" placeholder="Pesquisar"onkeyup="filtrarTabela()" />
 
-                        <button id="btnBusca"><img src="./img/search.png" />Filtrar</button>
+                        <button id="btnBusca" ><img src="./img/search.png" />Filtrar</button>
                     </form>
                 </div>
             </div>
@@ -141,7 +141,7 @@
                                 <p>*Campos obrigatórios</p>
                             </div>
                             <div id="button1">
-                                <button onclick="fecharModal2()" id="buttonConfirm">Cancelar</button>
+                                <button type="button" onclick="fecharModal()" id="buttonConfirm">Cancelar</button>
                                 <button onclick="abrirModal4()" type="submit" id="buttonConfirm">Salvar</button>
                             </div>
                         </div>

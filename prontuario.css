@@ -117,12 +117,80 @@ a {
     background-color: #FFFFFF;
 }
 #section{
-    
-    background: yellow;
+   
     margin-left: 40px;
     width: 770px;
-    height: 100px;
+    height: 200px;
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0px 8px 8px 0px;
+    box-sizing: border-box;
+    border-left: 5px solid #00995D;
+    
 }
+
+#sectionPersonagem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #017849;
+    margin-left: 35px;
+    margin-top: -23px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    
+    
+    
+ 
+}
+
+#imgSection{
+
+    height: 40px;
+    width: 40px;
+}
+#sectionContent{
+   margin: 60px auto;
+}
+
+.section{
+    margin-left: 40px;
+    width: 770px;
+    height: 200px;
+    position: absolute;
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0px 8px 8px 0px;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    border-left: 2px solid #2F80ED;
+}
+
+.sectionPersonagem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2F80ED;
+    margin-left: 35px;
+    margin-top: -23px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    position: relative;
+    
+    
+ 
+}
+
+.imgSection{
+
+    height: 40px;
+    width: 40px;
+}
+
 #pesquisa{
     display: flex;
     text-align: center;

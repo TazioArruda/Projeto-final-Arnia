@@ -6,10 +6,28 @@ const modal5 = document.getElementById("modal5")
 const modal6 = document.getElementById("modal6")
 const form = document.getElementById("formModal")
 const form2 =  document.getElementById("formModal2")
+const filter = document.getElementById("batata")
 let edicaoPaciente = null
 
 
+const filtrarTabela = () =>{
+    let input, filtro, tabela, linhas, linha, i, valorCelula;
+    input = document.getElementById("btnBusca")
+    filtro = input.value.toUpperCase()
+    tabela = document.getElementById("contentTable")
+    linhas = tabela.getElementsByTagName("td")
 
+    coluna = 1;
+    for(i=0; i< linhas.length;i++){
+        valorCelula = linhas[i].getElementsByTagName("td")[linha];
+
+        if (valorCelula){
+            if(valorCelula){
+
+            }
+        }
+    }
+}
 
 
 getPacientes = async ()=>{
@@ -23,9 +41,9 @@ getPacientes = async ()=>{
     pacientes.forEach(paciente => {
 
         conteudo = conteudo +`  <tr>
-        <td onclick="abrirModal()">${paciente.id}</td>
-        <td onclick="abrirModal()">${paciente.nome}</td>
-        <td onclick="abrirModal()">${paciente.cpf}</td>
+        <td onclick="abrirModal3()">${paciente.id}</td>
+        <td onclick="abrirModal3()">${paciente.nome}</td>
+        <td onclick="abrirModal3()">${paciente.cpf}</td>
         <td>
             <div>
                 <button id="icon1"><a href="pronturario.html"><img src="./img/pront.png"></button></a>
@@ -81,8 +99,13 @@ putPaciente = async (id, novo) =>{
     fecharModal2()
     getPacientes()
     edicaoPaciente = null
-
 }
+
+
+
+
+
+
 
 editarPaciente = async (idPaciente) => {
     const requisicao = await fetch(`http://localhost:3000/novoCadastro/${idPaciente}`)
@@ -102,7 +125,7 @@ editarPaciente = async (idPaciente) => {
     document.getElementById('pai2').value = edicaoPaciente.pai
     
 
-    abrirModal2()
+    abrirModal2(idPaciente)
     
 }
 
@@ -135,6 +158,7 @@ console.log(modal2)
 
 fecharModal2 = () =>{
     modal2.style.display = "none"
+    console.log(fecharModal2)
 }
 
 // ---------------------Abrir e fechar modal 3 
