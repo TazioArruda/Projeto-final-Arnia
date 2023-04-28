@@ -105,7 +105,6 @@ a {
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     
- 
 }
 #opcao{
     display: flex;
@@ -117,7 +116,7 @@ a {
     background-color: #FFFFFF;
 }
 #section{
-   
+
     margin-left: 40px;
     width: 770px;
     height: 200px;
@@ -127,7 +126,8 @@ a {
     border-radius: 0px 8px 8px 0px;
     box-sizing: border-box;
     border-left: 5px solid #00995D;
-    
+    position: relative;
+  
 }
 
 #sectionPersonagem{
@@ -152,21 +152,43 @@ a {
     width: 40px;
 }
 #sectionContent{
-   margin: 60px auto;
+   margin: 1px;
+
+}
+
+#retan{
+    margin-left: 101px;
+    height: 50px;
+    
+
+}
+#store{
+    margin-top: 60px;
+}
+#filtrolinha{
+    
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 35px;
+}
+#linha{
+    width: 657px;
+    height: 0px;
+    border: 1px solid #BDBDBD;
 }
 
 .section{
     margin-left: 40px;
     width: 770px;
     height: 200px;
-    position: absolute;
+    position: relative;
     background: #FFFFFF;
     border: 1px solid #E0E0E0;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
     border-radius: 0px 8px 8px 0px;
     box-sizing: border-box;
-    box-sizing: border-box;
-    border-left: 2px solid #2F80ED;
+    border-left: 5px solid #2F80ED;
 }
 
 .sectionPersonagem{
@@ -189,6 +211,22 @@ a {
 
     height: 40px;
     width: 40px;
+}
+
+#sessaop{
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}
+#textsessao{
+    width: 740px;
+    margin-top: 15px;
+    margin-left: 15px;
+
 }
 
 #pesquisa{
@@ -273,7 +311,7 @@ a {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 15px;
 
 }
 #paciente{
