@@ -172,6 +172,11 @@ a {
     justify-content: end;
     margin-top: 35px;
 }
+#tpontos{
+    margin-left: 708px;
+    height: 6px;
+
+}
 #linha{
     width: 657px;
     height: 0px;
@@ -181,7 +186,7 @@ a {
 .section{
     margin-left: 40px;
     width: 770px;
-    height: 200px;
+    
     position: relative;
     background: #FFFFFF;
     border: 1px solid #E0E0E0;
@@ -207,6 +212,13 @@ a {
  
 }
 
+#volptopo{
+
+    display: flex;
+    justify-content: center;
+
+}
+
 .imgSection{
 
     height: 40px;
@@ -223,11 +235,16 @@ a {
     color: #000000;
 }
 #textsessao{
+
     width: 740px;
+    height: 120px;
     margin-top: 15px;
     margin-left: 15px;
-
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
 }
+
 
 #pesquisa{
     display: flex;

@@ -6,11 +6,11 @@ const modal5 = document.getElementById("modal5")
 const modal6 = document.getElementById("modal6")
 const form = document.getElementById("formModal")
 const form2 =  document.getElementById("formModal2")
-const filter = document.getElementById("batata")
+
 let edicaoPaciente = null
 
 
-const filtrarTabela = () =>{
+/*const filtrarTabela = () =>{
     let input, filtro, tabela, linhas, linha, i, valorCelula;
     input = document.getElementById("btnBusca")
     filtro = input.value.toUpperCase()
@@ -22,13 +22,13 @@ const filtrarTabela = () =>{
         valorCelula = linhas[i].getElementsByTagName("td")[linha];
 
         if (valorCelula){
-            if(valorCelula){
+            if(valorCelula.innerHTML){
 
             }
         }
     }
 }
-
+*/
 
 getPacientes = async ()=>{
     
