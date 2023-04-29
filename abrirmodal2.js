@@ -7,28 +7,44 @@ const modal6 = document.getElementById("modal6")
 const form = document.getElementById("formModal")
 const form2 =  document.getElementById("formModal2")
 
+
+
+
 let edicaoPaciente = null
 
 
-/*const filtrarTabela = () =>{
-    let input, filtro, tabela, linhas, linha, i, valorCelula;
-    input = document.getElementById("btnBusca")
+/*const filter = async () =>{
+    const pesquisar = inputpesquisa.value;
+    const requisicao = await fetch (`http://localhost:3000/novoCadastro${pesquisar}`)
+    const data = await requisicao.json()
+}*/
+
+filtrarTabela = async () => {
+    let input, filtro, tabela, linhas, i, valorCelula;
+    const requisicao = await fetch('http://localhost:3000/novoCadastro')
+    const pacientes = await requisicao.json()
+    console.log(pacientes)
+    input = document.getElementById("txtBusca")
     filtro = input.value.toUpperCase()
     tabela = document.getElementById("contentTable")
-    linhas = tabela.getElementsByTagName("td")
+    linhas = tabela.getElementsByTagName("tr")
 
     coluna = 1;
     for(i=0; i< linhas.length;i++){
-        valorCelula = linhas[i].getElementsByTagName("td")[linha];
+        valorCelula = linhas[i].getElementsByTagName("td")[coluna];
 
-        if (valorCelula){
-            if(valorCelula.innerHTML){
+        if(valorCelula){
+            if(valorCelula.innerHTML.toUpperCase().indexOf(filtro)){
+                linhas[i].style.display="";
 
+            } else {
+                linhas[i].style.display ="none"
             }
         }
     }
+
 }
-*/
+
 
 getPacientes = async ()=>{
     
@@ -111,7 +127,7 @@ editarPaciente = async (idPaciente) => {
     const requisicao = await fetch(`http://localhost:3000/novoCadastro/${idPaciente}`)
     edicaoPaciente = await requisicao.json()
 
-    document.getElementById('cpf2').value = edicaoPaciente.cpf
+    document.getElementById('cpf2').value = edicaoPaciente.cpf 
     document.getElementById('nome2').value = edicaoPaciente.nome
     document.getElementById('dataNas2').value = edicaoPaciente.dataNas
     document.getElementById('email2').value = edicaoPaciente.email
@@ -125,7 +141,7 @@ editarPaciente = async (idPaciente) => {
     document.getElementById('pai2').value = edicaoPaciente.pai
     
 
-    abrirModal2(idPaciente)
+    abrirModal2()
     
 }
 
@@ -225,15 +241,15 @@ const processarDados = (paciente) =>{
 form.addEventListener("submit", (e)=>{
     e.preventDefault()
 
-    const cpfForm = form.elements["cpf"].value
+    const cpfForm = form.elements["cpf"].value 
     const nomeForm = form.elements["nome"].value
     const dataNasForm = form.elements["dataNas"].value
     const emailForm = form.elements["email"].value
     const sexoForm = form.elements["sexo"].value
     const nacForm = form.elements["nac"].value
     const natuForm = form.elements["natu"].value
-    const profForm = form.elements["prof"].value
-    const escoForm = form.elements["esco"].value
+    const profForm = form.elements["prof"].value 
+    const escoForm = form.elements["esco"].value 
     const civilForm = form.elements["civil"].value
     const maeForm = form.elements["mae"].value
     const paiForm = form.elements["pai"].value
@@ -251,7 +267,7 @@ form.addEventListener("submit", (e)=>{
         esco:escoForm,
         civil:civilForm,
         mae:maeForm,
-        pai:paiForm
+        pai:paiForm,
 
 
     }
