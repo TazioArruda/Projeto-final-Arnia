@@ -4,7 +4,7 @@
 }
 
 body{
-    background-image:url(./img/logobody.png);
+    background-image:url(../img/logobody.png);
     background-repeat: no-repeat;
     background-color: #E5E5E5;
 }
@@ -122,9 +122,8 @@ body{
     width: 350px;
 }
 
-#logo-form1{
 
-}
+
 
 #buttom2{
     margin-top: 30px;
