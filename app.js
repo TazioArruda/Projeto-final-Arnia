@@ -21,8 +21,10 @@ let edicaoPaciente = null
 
 filtrarTabela = async () => {
     let input, filtro, tabela, linhas, i, valorCelula;
-    const requisicao = await fetch('http://localhost:3000/novoCadastro')
+
+    const requisicao = await fetch(`http://localhost:3000/novoCadastro`)
     const pacientes = await requisicao.json()
+
     console.log(pacientes)
     input = document.getElementById("txtBusca")
     filtro = input.value.toUpperCase()
@@ -57,7 +59,7 @@ getPacientes = async ()=>{
     pacientes.forEach(paciente => {
 
         conteudo = conteudo +`  <tr>
-        <td onclick="abrirModal3()">${paciente.id}</td>
+        <td onclick="consultarPaciente(${paciente.id})">${paciente.id}</td>
         <td onclick="abrirModal3()">${paciente.nome}</td>
         <td onclick="abrirModal3()">${paciente.cpf}</td>
         <td>
@@ -118,6 +120,30 @@ putPaciente = async (id, novo) =>{
 }
 
 
+
+consultarPaciente = async (id) =>{
+    const requisicao = await fetch(`http://localhost:3000/novoCadastro/${id}`)
+    consPaciente = await requisicao.json()
+
+    document.getElementById('cpf').value = consPaciente.cpf 
+    document.getElementById('nome').value = consPaciente.nome
+    document.getElementById('dataNas').value = consPaciente.dataNas
+    document.getElementById('email').value = consPaciente.email
+    document.getElementById('sexo').value = consPaciente.sexo
+    document.getElementById('nac').value = consPaciente.nac
+    document.getElementById('natu2').value = consPaciente.natu
+    document.getElementById('prof2').value = consPaciente.prof
+    document.getElementById('esco2').value = consPaciente.esco
+    document.getElementById('civil2').value = consPaciente.civil
+    document.getElementById('mae2').value = consPaciente.mae
+    document.getElementById('pai2').value = consPaciente.pai
+  
+
+    
+    abrirModal3()
+    
+    
+}
 
 
 
@@ -218,6 +244,11 @@ fecharModal6 = () =>{
     modal6.style.display = "none"
 }
 
+//--------------- função para atualizar a pagina quando o cadastro for efetuado-----------///
+
+function recarregarAPagina(){
+    window.location.reload();
+} 
 
 //----------------- FUNÇÃO DE EDIÇÃO DE PACIENTE -------------------------///
 

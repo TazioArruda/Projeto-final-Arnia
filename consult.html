@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="consult.css">
     <script src="https://kit.fontawesome.com/bf9e50d531.js" crossorigin="anonymous"></script>
-    <script src="abrirmodal2.js" defer></script>
+    <script src="app.js" defer></script>
     <title>Document</title>
 </head>
 
@@ -36,9 +36,9 @@
                 <div id="buscar">
 
                     <form id="search">
-                        <input type="text" id="txtBusca" placeholder="Pesquisar" onkeyup="filtrarTabela()" />
+                        <input type="text" id="txtBusca" placeholder="Pesquisar" onkeyup="filtrarTabela()"/>
 
-                        <button id="btnBusca" ><img src="./img/search.png" />Filtrar</button>
+                        <button id="btnBusca"  onclick="recarregarAPagina()" ><img src="./img/search.png" />Filtrar</button>
                     </form>
                 </div>
             </div>
@@ -142,7 +142,8 @@
                             </div>
                             <div id="button1">
                                 <button type="button" onclick="fecharModal()" id="buttonConfirm">Cancelar</button>
-                                <button onclick="abrirModal4()" type="submit" id="buttonConfirm">Salvar</button>
+                                <button onclick="abrirModal4(), recarregarAPagina()" type="submit" id="buttonConfirm">Salvar</button>
+                                
                             </div>
                         </div>
 
