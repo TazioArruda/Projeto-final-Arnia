@@ -7,7 +7,7 @@ const modal6 = document.getElementById("modal6")
 const form = document.getElementById("formModal")
 const form2 =  document.getElementById("formModal2")
 
-
+const apiUrl = 'https://arniabackend.onrender.com'
 
 
 let edicaoPaciente = null
@@ -18,7 +18,7 @@ filtrarTabela = async () => {
 
     let input, filtro, tabela, linhas, i, valorCelula;
 
-    const requisicao = await fetch(`http://localhost:3000/novoCadastro`)
+    const requisicao = await fetch(apiUrl + 'novoCadastro')
     const pacientes = await requisicao.json()
 
     console.log(pacientes)
@@ -49,7 +49,7 @@ filtrarTabela = async () => {
 getPacientes = async ()=>{
     
     const content = document.getElementById('batata')
-    const requisicao = await fetch('http://localhost:3000/novoCadastro')
+    const requisicao = await fetch(apiUrl + 'novoCadastro')
     const pacientes = await requisicao.json()
     console.log(pacientes)
     let conteudo = ''
@@ -81,7 +81,7 @@ getPacientes = async ()=>{
 
 
 postPaciente = async (novo) =>{
-    await fetch ('http://localhost:3000/novoCadastro',{
+    await fetch (apiUrl + 'novoCadastro',{
         method:'POST',
         headers:{
             'Accept': 'application/json, text/plain, */*', 
@@ -101,7 +101,7 @@ postPaciente = async (novo) =>{
 
 putPaciente = async (id, novo) =>{
 
-    await fetch (`http://localhost:3000/novoCadastro/${id}`,{
+    await fetch (apiUrl + `novoCadastro/${id}`,{
         method:'PUT',
         headers:{
             'Accept': 'application/json, text/plain, */*', 
@@ -120,7 +120,7 @@ putPaciente = async (id, novo) =>{
 
 
 consultarPaciente = async (id) =>{
-    const requisicao = await fetch(`http://localhost:3000/novoCadastro/${id}`)
+    const requisicao = await fetch(apiUrl + `novoCadastro/${id}`)
     consPaciente = await requisicao.json()
 
     document.getElementById('cpf').value = consPaciente.cpf 
@@ -148,7 +148,7 @@ consultarPaciente = async (id) =>{
 
 
 editarPaciente = async (idPaciente) => {
-    const requisicao = await fetch(`http://localhost:3000/novoCadastro/${idPaciente}`)
+    const requisicao = await fetch(apiUrl + `novoCadastro/${idPaciente}`)
     edicaoPaciente = await requisicao.json()
 
     document.getElementById('cpf2').value = edicaoPaciente.cpf 
@@ -170,7 +170,7 @@ editarPaciente = async (idPaciente) => {
 }
 
 removerPaciente = async (idPaciente) => {
-    await fetch (`http://localhost:3000/novoCadastro/${idPaciente}`,{
+    await fetch (apiUrl + `novoCadastro/${idPaciente}`,{
         method:'DELETE',
     })
 
