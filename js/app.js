@@ -24,7 +24,7 @@ let edicaoPaciente = null
 filtrarTabela = async () => {
     let input, filtro, tabela, linhas, i, valorCelula;
 
-    const requisicao = await fetch(apiUrl + '/novoCadastro')
+    const requisicao = await fetch(apiUrl+'/novoCadastro')
     const pacientes = await requisicao.json()
 
     console.log(pacientes)
@@ -55,11 +55,13 @@ filtrarTabela = async () => {
 getPacientes = async ()=>{
     
     const content = document.getElementById('batata')
+    console.log("inicio")
     const requisicao = await fetch(apiUrl + '/novoCadastro')
     const pacientes = await requisicao.json()
     console.log(pacientes)
     let conteudo = ''
 
+    console.log("inicio")
     pacientes.forEach(paciente => {
 
         conteudo = conteudo +`  <tr>
@@ -75,13 +77,13 @@ getPacientes = async ()=>{
         </td>
     </tr>
     `
-        
+    console.log("inicio") 
         
     });
 
     content.innerHTML = conteudo
 
-    
+    console.log("inicio")
 
 }
 
