@@ -19,6 +19,8 @@ let edicaoPaciente = null
     const data = await requisicao.json()
 }*/
 
+
+
 filtrarTabela = async () => {
     let input, filtro, tabela, linhas, i, valorCelula;
 
@@ -85,7 +87,7 @@ getPacientes = async ()=>{
 
 
 postPaciente = async (novo) =>{
-    await fetch (apiUrl + 'novoCadastro',{
+    await fetch (apiUrl + '/novoCadastro',{
         method:'POST',
         headers:{
             'Accept': 'application/json, text/plain, */*', 
@@ -105,7 +107,7 @@ postPaciente = async (novo) =>{
 
 putPaciente = async (id, novo) =>{
 
-    await fetch (apiUrl + `novoCadastro/${id}`,{
+    await fetch (apiUrl + `/novoCadastro/${id}`,{
         method:'PUT',
         headers:{
             'Accept': 'application/json, text/plain, */*', 
@@ -124,7 +126,7 @@ putPaciente = async (id, novo) =>{
 
 
 consultarPaciente = async (id) =>{
-    const requisicao = await fetch(apiUrl + `novoCadastro/${id}`)
+    const requisicao = await fetch(apiUrl + `/novoCadastro/${id}`)
     consPaciente = await requisicao.json()
 
     document.getElementById('cpf').value = consPaciente.cpf 
@@ -152,7 +154,7 @@ consultarPaciente = async (id) =>{
 
 
 editarPaciente = async (idPaciente) => {
-    const requisicao = await fetch(apiUrl + `novoCadastro/${idPaciente}`)
+    const requisicao = await fetch(apiUrl + `/novoCadastro/${idPaciente}`)
     edicaoPaciente = await requisicao.json()
 
     document.getElementById('cpf2').value = edicaoPaciente.cpf 
@@ -174,7 +176,7 @@ editarPaciente = async (idPaciente) => {
 }
 
 removerPaciente = async (idPaciente) => {
-    await fetch (apiUrl + `novoCadastro/${idPaciente}`,{
+    await fetch (apiUrl + `/novoCadastro/${idPaciente}`,{
         method:'DELETE',
     })
 
