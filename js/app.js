@@ -13,9 +13,13 @@ const apiUrl = 'https://arniabackend.onrender.com'
 let edicaoPaciente = null
 
 
+/*const filter = async () =>{
+    const pesquisar = inputpesquisa.value;
+    const requisicao = await fetch (`http://localhost:3000/novoCadastro${pesquisar}`)
+    const data = await requisicao.json()
+}*/
+
 filtrarTabela = async () => {
-
-
     let input, filtro, tabela, linhas, i, valorCelula;
 
     const requisicao = await fetch(apiUrl + 'novoCadastro')
@@ -39,11 +43,11 @@ filtrarTabela = async () => {
                 linhas[i].style.display ="none"
             }
         }
-        console.log(valorCelula)
     }
-    
 
 }
+
+
 
 
 getPacientes = async ()=>{
