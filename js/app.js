@@ -8,64 +8,38 @@ const form = document.getElementById("formModal")
 const form2 =  document.getElementById("formModal2")
 
 const apiUrl = 'https://arniabackend.onrender.com'
+//const apiUrl = 'http://localhost:3000'
 
 
 let edicaoPaciente = null
 
 
-/*const filter = async () =>{
-    const pesquisar = inputpesquisa.value;
-    const requisicao = await fetch (`http://localhost:3000/novoCadastro${pesquisar}`)
-    const data = await requisicao.json()
-}*/
-
-
-
-filtrarTabela = async () => {
-    let input, filtro, tabela, linhas, i, valorCelula;
-
-    const requisicao = await fetch(apiUrl+'/novoCadastro')
-    const pacientes = await requisicao.json()
-
-    console.log(pacientes)
-    input = document.getElementById("txtBusca")
-    filtro = input.value.toUpperCase()
-    tabela = document.getElementById("contentTable")
-    linhas = tabela.getElementsByTagName("tr")
-
-    coluna = 1;
-    for(i=0; i< linhas.length;i++){
-        valorCelula = linhas[i].getElementsByTagName("td")[coluna];
-
-        if(valorCelula){
-            if(valorCelula.innerHTML.toUpperCase().indexOf(filtro)){
-                linhas[i].style.display="";
-
-            } else {
-                linhas[i].style.display ="none"
-            }
-        }
-    }
-
-}
 
 
 
 
 getPacientes = async ()=>{
     
-    const content = document.getElementById('batata')
     console.log("inicio")
-    const requisicao = await fetch(apiUrl+'/novoCadastro')
+    const requisicao = await fetch(apiUrl + '/novoCadastro')
     const pacientes = await requisicao.json()
     console.log(pacientes)
+
+    adicionar(pacientes)
+
+}
+
+const adicionar = (pacientes) =>{
+    
+    const content = document.getElementById('batata')
     let conteudo = ''
+    
 
     console.log("inicio")
     pacientes.forEach(paciente => {
 
         conteudo = conteudo +`  <tr>
-        <td onclick="consultarPaciente(${paciente.id})">${paciente.id}</td>
+        <td onclick="abrirmodal3(${paciente.id})">${paciente.id}</td>
         <td onclick="abrirModal3()">${paciente.nome}</td>
         <td onclick="abrirModal3()">${paciente.cpf}</td>
         <td>
@@ -77,14 +51,22 @@ getPacientes = async ()=>{
         </td>
     </tr>
     `
-    console.log("inicio") 
+    console.log("inicio")
+    
+    content.innerHTML = conteudo
         
     });
 
-    content.innerHTML = conteudo
+}
 
-    console.log("inicio")
+const filter = async () =>{
+    const seamostrar = document.getElementById("txtBusca")
+    const valor = seamostrar.value
+    const requisicao = await fetch(apiUrl +`/novoCadastro?nome_like=${valor}`)
+    const filtrados = await requisicao.json()
+    console.log(valor)
 
+    adicionar(filtrados)
 }
 
 
@@ -252,9 +234,9 @@ fecharModal6 = () =>{
 
 //--------------- função para atualizar a pagina quando o cadastro for efetuado-----------///
 
-function recarregarAPagina(){
+/*function recarregarAPagina(){
     window.location.reload();
-} 
+}*/ 
 
 //----------------- FUNÇÃO DE EDIÇÃO DE PACIENTE -------------------------///
 
@@ -350,4 +332,8 @@ form2.addEventListener("submit", (e) =>{
     fecharModal2()
 })
 
+
+
 getPacientes()
+document.getElementById("btnBusca").addEventListener('click',filter)
+
